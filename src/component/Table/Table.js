@@ -61,7 +61,7 @@ const Table = () => {
 
 
             </table>
-            {data.records.length === 0 && data.pending == true &&
+            {data.records.length === 0 && data.pending === true &&
                 <Spinner></Spinner>
             }
 

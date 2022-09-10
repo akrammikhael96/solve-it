@@ -1,4 +1,4 @@
-import { PER_PAGE, FILTER, SHOW_PAGE, FETCH_DATA, FETCH_DATA_REJECTED, FETCH_DATA_PENDING } from "../actionTypes/actionTypes";
+import { PER_PAGE, FILTER, SHOW_PAGE, FETCH_DATA, FETCH_DATA_REJECTED } from "../actionTypes/actionTypes";
 
 const setRecordsPerPage = (records) => {
     return {
