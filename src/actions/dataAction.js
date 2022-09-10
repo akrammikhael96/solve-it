@@ -1,4 +1,4 @@
-import { PER_PAGE, FILTER, SHOW_PAGE, FETCH_DATA, FETCH_DATA_REJECTED } from "../actionTypes/actionTypes";
+import { PER_PAGE, FILTER, SHOW_PAGE, FETCH_DATA, FETCH_DATA_REJECTED, FETCH_DATA_PENDING } from "../actionTypes/actionTypes";
 
 const setRecordsPerPage = (records) => {
     return {
@@ -27,6 +27,7 @@ const fetchData = () => {
             const response = await fetch(
                 "https://gorest.co.in/public/v2/users"
             );
+
             const data = await response.json();
             dispatch({ type: FETCH_DATA, data: data });
         } catch (err) {

@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 
 import { fetchData } from "../../actions/dataAction";
 import { useSelector, useDispatch } from "react-redux";
+import Spinner from '../Spinner/Spinner';
 
 const Table = () => {
 
@@ -19,6 +20,7 @@ const Table = () => {
 
 
     const data = useSelector((state) => state);
+    console.log(data)
 
 
     const tableItems = data.records.slice(((data.recordsPerPage * data.pageToShow) - data.recordsPerPage), (data.recordsPerPage * data.pageToShow)).map((row) =>
@@ -59,7 +61,11 @@ const Table = () => {
 
 
             </table>
-            {data.records.length === 0 &&
+            {data.records.length === 0 && data.pending == true &&
+                <Spinner></Spinner>
+            }
+
+            {data.records.length === 0 && data.pending === false &&
                 <h5 className="noRecords">No records Found</h5>}
 
         </div>

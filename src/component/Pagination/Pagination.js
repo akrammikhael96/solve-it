@@ -17,7 +17,7 @@ const RecordsPerPage = () => {
 
     const arrOfPages = Array.from({ length: data.noOfPages }, (v, k) => k + 1).map((pageNumber) =>
 
-        <button onClick={clickHandler} value={pageNumber} key={pageNumber} className={`${styles.btn} ${pageNumber === +data.pageToShow && styles.selected}`}>{pageNumber}</button>
+        <button onClick={clickHandler} value={pageNumber} key={pageNumber} className={`${styles.btn} ${pageNumber == data.pageToShow && styles.selected}`}>{pageNumber}</button>
 
 
     );
@@ -29,7 +29,7 @@ const RecordsPerPage = () => {
 
     return (
         <div>
-            {data.allRecords.length > data.recordsPerPage &&
+            {data.records.length > data.recordsPerPage &&
                 <div>{arrOfPages}</div>
             }
         </div>

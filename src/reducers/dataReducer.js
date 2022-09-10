@@ -1,7 +1,7 @@
-import { PER_PAGE, FILTER, SHOW_PAGE, FETCH_DATA, FETCH_DATA_REJECTED } from "../actionTypes/actionTypes";
+import { PER_PAGE, FILTER, SHOW_PAGE, FETCH_DATA, FETCH_DATA_REJECTED, FETCH_DATA_PENDING } from "../actionTypes/actionTypes";
 
 const initialState = {
-
+    pending: true,
     recordsPerPage: 2,
     allRecords: [],
     records: [],
@@ -15,9 +15,19 @@ const dataReducer = (state = initialState, action) => {
 
     switch (action.type) {
 
+        case FETCH_DATA_PENDING:
+            return {
+                ...state,
+                pending: action.pending,
+
+
+            };
+
+
         case FETCH_DATA:
             return {
                 ...state,
+                pending: false,
                 records: action.data,
                 allRecords: action.data,
                 get noOfPages() { return Math.ceil(this.records.length / this.recordsPerPage) }
