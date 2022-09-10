@@ -20,7 +20,7 @@ const Table = () => {
 
 
     const data = useSelector((state) => state);
-    console.log(data)
+
 
 
     const tableItems = data.records.slice(((data.recordsPerPage * data.pageToShow) - data.recordsPerPage), (data.recordsPerPage * data.pageToShow)).map((row) =>

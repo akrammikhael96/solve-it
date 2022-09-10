@@ -58,3 +58,47 @@
   width: 70vw;
   margin-bottom: 3vw;
 }
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .solveItLogo {
+    width: 10vw;
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  .solveItLogo {
+    width: 40vw;
+    text-align: center;
+  }
+
+  .appBar {
+    width: 100%;
+    background-color: #eee;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5vw;
+
+    box-sizing: border-box;
+  }
+
+  .tableFiltersContainer {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+    margin-top: 3vw;
+    margin-bottom: 0.5vw;
+    align-self: center;
+    width: 70vw;
+  }
+}
