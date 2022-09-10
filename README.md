@@ -4,7 +4,7 @@ A react/redux responsive data visualization app with search filter and dynamic p
 
 ## Demo
 
-solve-it-am96.netlify.app/
+https://solve-it-am96.netlify.app
 
 ![Fetching Data](https://github.com/akrammikhael96/solve-it/blob/master/preview/Fetching%20Data.png)
 
