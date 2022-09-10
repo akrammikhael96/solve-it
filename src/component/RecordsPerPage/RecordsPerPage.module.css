@@ -1,0 +1,16 @@
+.recordsPerPageCard {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1vw;
+  gap: 0.5vh;
+}
+
+.perPageText {
+  font-weight: 200;
+  font-size: 1vw;
+}

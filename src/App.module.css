@@ -1,0 +1,60 @@
+.mainPage {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+  min-height: 90vh;
+  margin: 5vh;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  z-index: 100;
+}
+
+.upperBorder {
+  background-color: #404040;
+  height: 4vh;
+  width: 100%;
+}
+
+.appBar {
+  width: 100%;
+  background-color: #eee;
+  height: 7vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5vw;
+
+  box-sizing: border-box;
+}
+
+.solveItLogo {
+  width: 10vw;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+.tableFiltersContainer {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 3vw;
+  margin-bottom: 0.5vw;
+  align-self: center;
+  width: 70vw;
+}
+
+.tableContainer {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  margin: 0.5vw;
+  align-self: center;
+  width: 70vw;
+  margin-bottom: 3vw;
+}

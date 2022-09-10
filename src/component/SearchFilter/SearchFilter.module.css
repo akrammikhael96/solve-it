@@ -1,0 +1,51 @@
+.userSearchCard {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  gap: 0.5vh;
+}
+
+.searchIcon {
+  position: absolute;
+  box-sizing: border-box;
+  top: 25%;
+  left: 1vw;
+
+  /* width: 70%; */
+  height: 60%;
+
+  /* transform: translateY(-50%); */
+}
+
+.title {
+  font-size: 1.4vw;
+  margin: 0;
+}
+.inputField {
+  width: 70%;
+  padding-left: 2.5vw;
+  font-weight: 100;
+  font-size: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+.inputField::placeholder {
+  font-size: 1vw;
+}
+
+.subtitle {
+  font-weight: 100;
+  font-size: 1vw;
+  margin: 0;
+}
+
+.searchContainer {
+  position: relative;
+
+  width: 80%;
+}
