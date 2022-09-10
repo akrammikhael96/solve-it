@@ -1,4 +1,4 @@
-import { PER_PAGE, FILTER, SHOW_PAGE } from "../actionTypes/actionTypes";
+import { PER_PAGE, FILTER, SHOW_PAGE, FETCH_DATA, FETCH_DATA_REJECTED } from "../actionTypes/actionTypes";
 
 const setRecordsPerPage = (records) => {
     return {
@@ -21,6 +21,22 @@ const filterRecords = (filterName) => {
     };
 };
 
+const fetchData = () => {
+    return async (dispatch) => {
+        try {
+            const response = await fetch(
+                "https://gorest.co.in/public/v2/users"
+            );
+            const data = await response.json();
+            dispatch({ type: FETCH_DATA, data: data });
+        } catch (err) {
+            dispatch({ type: FETCH_DATA_REJECTED, error: err });
+        }
+    };
+};
 
 
-export { setRecordsPerPage, setPageToShow, filterRecords };
+
+
+
+export { setRecordsPerPage, setPageToShow, filterRecords, fetchData };

@@ -5,6 +5,7 @@ import { setRecordsPerPage } from "../../actions/dataAction"
 
 
 
+
 const RecordsPerPage = () => {
     const data = useSelector((state) => state);
     // const [selected, setSelected] = useState(2);
@@ -12,6 +13,7 @@ const RecordsPerPage = () => {
 
 
     const handleChange = event => {
+
         // console.log(event.target.value);
         // setSelected(event.target.value);
         dispatch(setRecordsPerPage(event.target.value));

@@ -2,18 +2,21 @@
 import styles from './App.module.css';
 import { Provider } from "react-redux";
 import store from "./store";
-
 import logo from './solve-it.png'
 import SearchFilter from './component/SearchFilter/SearchFilter';
 import RecordsPerPage from './component/RecordsPerPage/RecordsPerPage';
 import Pagination from './component/Pagination/Pagination';
 import Table from './component/Table/Table';
-import { useSelector } from "react-redux";
+
+
 
 
 
 
 function App() {
+
+
+
 
 
   return (

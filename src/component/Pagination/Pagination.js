@@ -29,7 +29,7 @@ const RecordsPerPage = () => {
 
     return (
         <div>
-            {data.records.length > data.recordsPerPage &&
+            {data.allRecords.length > data.recordsPerPage &&
                 <div>{arrOfPages}</div>
             }
         </div>

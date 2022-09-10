@@ -1,10 +1,25 @@
 import "./Table.module.css"
-import React from 'react';
+
+import React, { useEffect } from "react";
+
+import { fetchData } from "../../actions/dataAction";
 import { useSelector, useDispatch } from "react-redux";
 
 const Table = () => {
 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+
+        dispatch(fetchData());
+
+    }, [dispatch]);
+
+
+
+
     const data = useSelector((state) => state);
+
 
     const tableItems = data.records.slice(((data.recordsPerPage * data.pageToShow) - data.recordsPerPage), (data.recordsPerPage * data.pageToShow)).map((row) =>
         <tr key={row.id}>
