@@ -90,8 +90,6 @@
   }
 
   .tableFiltersContainer {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
@@ -100,5 +98,14 @@
     margin-bottom: 0.5vw;
     align-self: center;
     width: 70vw;
+  }
+
+  .tableContainer {
+    box-shadow: none;
+    margin: 0.5vw;
+    align-self: center;
+    width: 70vw;
+    /* margin-bottom: 3vw; */
+    /* background-color: black; */
   }
 }
