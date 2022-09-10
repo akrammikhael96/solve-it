@@ -14,7 +14,7 @@
   position: absolute;
   box-sizing: border-box;
   top: 25%;
-  left: 1vw;
+  left: 0.5vw;
 
   /* width: 70%; */
   height: 60%;
@@ -27,11 +27,11 @@
   margin: 0;
 }
 .inputField {
-  width: 70%;
+  width: 80%;
   padding-left: 2.5vw;
   font-weight: 100;
   font-size: 1vw;
-  padding-top: 0.5vw;
+  padding-top: 0.2vw;
   padding-bottom: 0.5vw;
 }
 .inputField::placeholder {
