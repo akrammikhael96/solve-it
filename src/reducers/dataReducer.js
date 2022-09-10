@@ -35,7 +35,7 @@ const dataReducer = (state = initialState, action) => {
                 records: initialState.records.filter(el => el.name.toLocaleLowerCase().includes(action.name.toLocaleLowerCase())),
                 get noOfPages() { return Math.ceil(this.records.length / this.recordsPerPage) },
                 get recordsPerPage() {
-                    if (this.filterName === "") { return 1 }
+                    if (this.filterName === "") { return initialState.recordsPerPage }
                     else { return this.records.length }
                 }
 

@@ -10,6 +10,7 @@ const RecordsPerPage = () => {
     // const [selected, setSelected] = useState(2);
     const dispatch = useDispatch();
 
+
     const handleChange = event => {
         // console.log(event.target.value);
         // setSelected(event.target.value);
@@ -19,7 +20,7 @@ const RecordsPerPage = () => {
 
     return (
         <div className={styles.recordsPerPageCard}>
-            <span className={styles.perPageText}>Showing {data.recordsPerPage} of {data.records.length} {``}
+            <span className={styles.perPageText}>Showing {+data.pageToShow === +data.noOfPages && data.records.length % data.recordsPerPage !== 0 ? data.records.length % data.recordsPerPage : data.recordsPerPage} of {data.records.length} {``}
                 <select value={data.recordsPerPage} onChange={handleChange}>
                     <option value="1">1</option>
                     <option value="2" defaultValue>2</option>

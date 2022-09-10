@@ -1,5 +1,3 @@
-
-
 import { createStore } from "redux";
 import dataReducer from "./reducers/dataReducer.js";
 
