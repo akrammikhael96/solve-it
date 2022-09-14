@@ -7,7 +7,7 @@ import Spinner from '../Spinner/Spinner';
 const Table = () => {
 
     const dispatch = useDispatch();
-    useEffect(() => { dispatch(fetchData()); }, [dispatch]);
+    useEffect(() => { dispatch(fetchData()); }, []);
     const data = useSelector((state) => state);
 
     const tableItems = data.records.slice(((data.recordsPerPage * data.pageToShow) - data.recordsPerPage), (data.recordsPerPage * data.pageToShow)).map((row) =>
