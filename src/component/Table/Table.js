@@ -1,7 +1,5 @@
 import "./Table.module.css"
-
 import React, { useEffect } from "react";
-
 import { fetchData } from "../../actions/dataAction";
 import { useSelector, useDispatch } from "react-redux";
 import Spinner from '../Spinner/Spinner';
@@ -9,19 +7,8 @@ import Spinner from '../Spinner/Spinner';
 const Table = () => {
 
     const dispatch = useDispatch();
-
-    useEffect(() => {
-
-        dispatch(fetchData());
-
-    }, [dispatch]);
-
-
-
-
+    useEffect(() => { dispatch(fetchData()); }, [dispatch]);
     const data = useSelector((state) => state);
-
-
 
     const tableItems = data.records.slice(((data.recordsPerPage * data.pageToShow) - data.recordsPerPage), (data.recordsPerPage * data.pageToShow)).map((row) =>
         <tr key={row.id}>
@@ -34,7 +21,6 @@ const Table = () => {
             <td data-column="Updated Date">12-12-2019 10:00 AM</td>
         </tr>
     );
-
 
     return (
         <div>
@@ -50,17 +36,12 @@ const Table = () => {
                         <th>Updated Date</th>
                     </tr>
                 </thead>
+
                 <tbody>
-
-
-
                     {tableItems}
-
                 </tbody>
-
-
-
             </table>
+
             {data.records.length === 0 && data.pending === true &&
                 <Spinner></Spinner>
             }
@@ -69,8 +50,6 @@ const Table = () => {
                 <h5 className="noRecords">No records Found</h5>}
 
         </div>
-
-
 
     );
 }

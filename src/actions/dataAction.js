@@ -27,7 +27,6 @@ const fetchData = () => {
             const response = await fetch(
                 "https://gorest.co.in/public/v2/users"
             );
-
             const data = await response.json();
             dispatch({ type: FETCH_DATA, data: data });
         } catch (err) {
@@ -35,9 +34,6 @@ const fetchData = () => {
         }
     };
 };
-
-
-
 
 
 export { setRecordsPerPage, setPageToShow, filterRecords, fetchData };
