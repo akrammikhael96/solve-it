@@ -23,7 +23,6 @@ const dataReducer = (state = initialState, action) => {
 
             };
 
-
         case FETCH_DATA:
             return {
                 ...state,
@@ -32,7 +31,6 @@ const dataReducer = (state = initialState, action) => {
                 allRecords: action.data,
                 get noOfPages() { return Math.ceil(this.records.length / this.recordsPerPage) }
             };
-
 
         case PER_PAGE:
             return {
@@ -62,9 +60,8 @@ const dataReducer = (state = initialState, action) => {
                     if (this.filterName === "") { return initialState.recordsPerPage }
                     else { return this.records.length }
                 },
-
-
             };
+
         default:
             return state;
     }
